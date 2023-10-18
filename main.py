@@ -10,7 +10,7 @@ EMBED_DIM = 32
 IMG_HEIGHT = 208
 IMG_WIDTH = 176
 
-model_path = 'D:\python fun projects\machine learning\modelscelebdiffusion218x178_48rf(good_old).pth'
+model_path = 'D:\python fun projects\machine learning\models\celebdiffusion218x178_48rf(good_old).pth'
 data_path = 'D:\python fun projects\machine learning\data'
 
 num_epochs = 1000000
@@ -84,16 +84,16 @@ def test():
     diffusion = Diffusion(IMG_HEIGHT, IMG_WIDTH, DEVICE)
 
     #diffusion.sample_random(model, T = 300, train_dataset=train_dataset)
-    #diffusion.sample_image(model, T=900)
+    diffusion.sample_image(model, T=900)
     #diffusion.sample_image_multiple(model, T=900, num=10)
     #diffusion.sample_random_multiple(model, T=300, train_dataset=train_dataset)
     #diffusion.generate_images(model, T=900, rows=2, cols=2)
     #diffusion.sample_random_one_step(model, T=300, train_dataset=train_dataset)
     #diffusion.generate_images_one_step(model, T=900, rows=3, cols=3)
-    diffusion.compare_generate_images(model, T=900, rows=2, cols=2)
+    #diffusion.compare_generate_images(model, T=900, rows=2, cols=2)
     
 
 if __name__ == '__main__':
-    #train()
-    test()
+    train()
+    #test()
     
